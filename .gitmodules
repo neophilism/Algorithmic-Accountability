@@ -1,0 +1,3 @@
+[submodule "vendor/caiae"]
+	path = vendor/caiae
+	url = https://github.com/neophilism/Compliance-Authorization-Immutable-Audit-Engine.git
