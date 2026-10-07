@@ -9,13 +9,19 @@ import {
 export function createPublicEngineClient() {
   const config =
     buildThinAppConfig();
+  const {
+    apiBaseUrl,
+    organizationId,
+    requestTimeoutMs,
+  } = config.engine;
 
   return createPublicClient({
-    baseUrl:
-      config.engine.apiBaseUrl,
-    organizationId:
-      config.engine.organizationId,
-    requestTimeoutMs:
-      config.engine.requestTimeoutMs,
+    baseUrl: apiBaseUrl,
+    ...(organizationId
+      ? { organizationId }
+      : {}),
+    ...(requestTimeoutMs
+      ? { requestTimeoutMs }
+      : {}),
   });
 }
