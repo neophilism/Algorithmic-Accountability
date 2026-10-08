@@ -36,16 +36,19 @@ inventory
 
 ## Current milestone
 
-**PR 8 — Remediation, suspension, and corrective action**
+**PR 9 — Deadlines, periodic review, and renewal**
 
-PR 8 adds corrective action after formal findings:
+PR 9 adds the accountability calendar and renewal-readiness layer:
 
-- CAIAE-native remediation planning, execution, verification, rejection, and cancellation;
-- finding closure only after all active remediation is verified;
-- temporary operational suspension without inventing a nonexistent authorization state;
-- safe resumption only after blocking findings clear and authorization remains effective;
-- permanent deployment retirement; and
-- replacement linkage that preserves the old deployment's immutable history.
+- assessment and reassessment deadlines;
+- recurring monitoring-review deadlines;
+- remediation clocks linked to findings;
+- authorization-renewal deadlines linked to the active authorization;
+- retirement/closeout deadlines;
+- CAIAE-native warning, grace, recurrence, and escalation mechanics; and
+- a fail-closed renewal readiness check that requires current assessment evidence, required monitoring evidence, an effective existing authorization, and no unresolved high/critical findings.
+
+Renewal readiness never extends an authorization automatically; it only determines whether the deployment is ready to re-enter the PR 4 authorization workflow.
 
 No enacted statute or legal mandate is assumed by PR 1. The initial policy
 source status is explicitly `policy-framework`.
@@ -99,4 +102,5 @@ See:
 - [Continuous monitoring](docs/MONITORING.md)
 - [Complaints, incidents, and findings](docs/CASES-FINDINGS.md)
 - [Corrective action](docs/CORRECTIVE-ACTION.md)
+- [Deadlines and renewal](docs/DEADLINES-RENEWAL.md)
 - [Development plan](docs/DEVELOPMENT-PLAN.md)
