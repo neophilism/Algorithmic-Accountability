@@ -24,6 +24,10 @@ export type ReportingClient =
     | "getDeadlineStatus"
     | "issueCertification"
     | "listResources"
+    | "previewPublication"
+    | "publishPublication"
+    | "unpublishPublication"
+    | "listPublications"
   >;
 
 const defaultPublicFields:
@@ -248,6 +252,180 @@ export function buildPublicAccountabilitySummary(
       ...report.metrics,
     },
   };
+}
+
+export async function previewDeploymentCompliancePublication(
+  client: ReportingClient,
+  deploymentContextResourceId: string,
+  options: {
+    asOf?: string;
+    omitPaths?: string[];
+    replacements?: JsonObject;
+  } = {},
+) {
+  const deployment =
+    await client.getResource(
+      deploymentContextResourceId,
+    );
+  requireDeployment(
+    deployment.resourceType,
+  );
+
+  return client.previewPublication({
+    subjectType: "resource",
+    subjectId: deployment.id,
+    projectionType:
+      "resource_compliance",
+    ...(options.asOf
+      ? { asOf: options.asOf }
+      : {}),
+    ...(
+      options.omitPaths ||
+      options.replacements
+        ? {
+            policy: {
+              ...(options.omitPaths
+                ? {
+                    omitPaths:
+                      options.omitPaths,
+                  }
+                : {}),
+              ...(options.replacements
+                ? {
+                    replacements:
+                      options.replacements,
+                  }
+                : {}),
+            },
+          }
+        : {}
+    ),
+  });
+}
+
+export async function publishDeploymentCompliancePublication(
+  client: ReportingClient,
+  input: {
+    deploymentContextResourceId: string;
+    principalId: string;
+    asOf?: string;
+    omitPaths?: string[];
+    replacements?: JsonObject;
+    correlationId?: string;
+  },
+) {
+  required(
+    input.principalId,
+    "principalId",
+  );
+
+  const deployment =
+    await client.getResource(
+      input.deploymentContextResourceId,
+    );
+  requireDeployment(
+    deployment.resourceType,
+  );
+
+  return client.publishPublication({
+    subjectType: "resource",
+    subjectId: deployment.id,
+    projectionType:
+      "resource_compliance",
+    principalId:
+      input.principalId,
+    ...(input.asOf
+      ? { asOf: input.asOf }
+      : {}),
+    ...(
+      input.omitPaths ||
+      input.replacements
+        ? {
+            policy: {
+              ...(input.omitPaths
+                ? {
+                    omitPaths:
+                      input.omitPaths,
+                  }
+                : {}),
+              ...(input.replacements
+                ? {
+                    replacements:
+                      input.replacements,
+                  }
+                : {}),
+            },
+          }
+        : {}
+    ),
+    ...(input.correlationId
+      ? {
+          correlationId:
+            input.correlationId,
+        }
+      : {}),
+  });
+}
+
+export async function unpublishDeploymentCompliancePublication(
+  client: ReportingClient,
+  input: {
+    deploymentContextResourceId: string;
+    principalId: string;
+    reason?: string;
+    correlationId?: string;
+  },
+) {
+  required(
+    input.principalId,
+    "principalId",
+  );
+
+  const deployment =
+    await client.getResource(
+      input.deploymentContextResourceId,
+    );
+  requireDeployment(
+    deployment.resourceType,
+  );
+
+  return client.unpublishPublication({
+    subjectType: "resource",
+    subjectId: deployment.id,
+    projectionType:
+      "resource_compliance",
+    principalId:
+      input.principalId,
+    ...(input.reason
+      ? { reason: input.reason }
+      : {}),
+    ...(input.correlationId
+      ? {
+          correlationId:
+            input.correlationId,
+        }
+      : {}),
+  });
+}
+
+export async function listDeploymentCompliancePublications(
+  client: ReportingClient,
+  deploymentContextResourceId: string,
+) {
+  const deployment =
+    await client.getResource(
+      deploymentContextResourceId,
+    );
+  requireDeployment(
+    deployment.resourceType,
+  );
+
+  return client.listPublications({
+    subjectType: "resource",
+    subjectId: deployment.id,
+    projectionType:
+      "resource_compliance",
+  });
 }
 
 export async function issueAccountabilityCertification(
