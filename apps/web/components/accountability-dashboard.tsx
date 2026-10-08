@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import type {
   AccountabilityDashboardState,
 } from "../lib/dashboard";
@@ -121,7 +123,9 @@ export function AccountabilityDashboard({
             >
               <div>
                 <strong>
-                  {deployment.name}
+                  <Link href={"/deployments/" + deployment.id}>
+                    {deployment.name}
+                  </Link>
                 </strong>
                 <small>
                   {deployment.status}

@@ -11,6 +11,12 @@ import {
   readOperatorReadiness,
   type OperatorEnvironment,
 } from "./operator";
+import {
+  buildAlgorithmicAccountabilityDemoDashboard,
+} from "./demo";
+import {
+  isAlgorithmicAccountabilityDemoMode,
+} from "./demo-mode";
 
 export type AccountabilityDashboardData = {
   generatedAt: string;
@@ -60,6 +66,14 @@ export async function loadAccountabilityDashboard(
   env: OperatorEnvironment =
     process.env as OperatorEnvironment,
 ): Promise<AccountabilityDashboardState> {
+  if (isAlgorithmicAccountabilityDemoMode(env)) {
+    return {
+      state: "ready",
+      data: buildAlgorithmicAccountabilityDemoDashboard(),
+      engineBaseUrl: "demo://self-contained",
+    };
+  }
+
   const readiness =
     readOperatorReadiness(env);
 

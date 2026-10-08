@@ -5,11 +5,27 @@ import {
 import {
   createPublicEngineClient,
 } from "../../../lib/engine";
+import {
+  isAlgorithmicAccountabilityDemoMode,
+} from "../../../lib/demo-mode";
 
 export const dynamic =
   "force-dynamic";
 
 export async function GET() {
+  if (isAlgorithmicAccountabilityDemoMode()) {
+    return Response.json({
+      engine: {
+        status: "ok",
+        service: "algorithmic-accountability-demo",
+        release: "fictional-demo",
+        timestamp: new Date().toISOString(),
+      },
+      demo: true,
+      fictional: true,
+    });
+  }
+
   try {
     const engine =
       await createPublicEngineClient()
