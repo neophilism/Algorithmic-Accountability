@@ -365,9 +365,7 @@ function certificationIsValid(
 ): boolean {
   return (
     certification.status ===
-      "active" ||
-    certification.status ===
-      "valid"
+      "active"
   );
 }
 
