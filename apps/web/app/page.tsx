@@ -10,8 +10,14 @@ import {
   EngineStatus,
 } from "../components/engine-status";
 import {
+  AccountabilityDashboard,
+} from "../components/accountability-dashboard";
+import {
   buildThinAppConfig,
 } from "../lib/config";
+import {
+  loadAccountabilityDashboard,
+} from "../lib/dashboard";
 
 export const dynamic =
   "force-dynamic";
@@ -27,9 +33,12 @@ function words(value: string) {
     .join(" ");
 }
 
-export default function HomePage() {
-  const config =
-    buildThinAppConfig();
+export default async function HomePage() {
+  const [config, dashboard] =
+    await Promise.all([
+      Promise.resolve(buildThinAppConfig()),
+      loadAccountabilityDashboard(),
+    ]);
 
   return (
     <main className="shell">
@@ -90,6 +99,8 @@ export default function HomePage() {
           engine.
         </p>
       </section>
+
+      <AccountabilityDashboard dashboard={dashboard} />
 
       <section className="panel">
         <div className="panel-heading">

@@ -387,3 +387,156 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+.dashboard-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.portfolio-count {
+  color: #687581;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(6, minmax(0, 1fr));
+  border-bottom:
+    1px solid #e3e7ea;
+}
+
+.metric-card {
+  padding: 17px 18px;
+  border-right:
+    1px solid #e6eaed;
+}
+
+.metric-card:last-child {
+  border-right: 0;
+}
+
+.metric-card span {
+  display: block;
+  color: #7a8791;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.metric-card strong {
+  display: block;
+  margin-top: 7px;
+  font-family:
+    Georgia, "Times New Roman",
+    serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.deployment-table {
+  width: 100%;
+}
+
+.deployment-row {
+  display: grid;
+  grid-template-columns:
+    minmax(190px, 1.35fr)
+    minmax(220px, 1.7fr)
+    minmax(90px, 0.7fr)
+    minmax(90px, 0.7fr)
+    minmax(90px, 0.7fr)
+    minmax(90px, 0.7fr);
+  gap: 16px;
+  align-items: center;
+  padding: 15px 18px;
+  border-bottom:
+    1px solid #e6eaed;
+  font-size: 0.75rem;
+}
+
+.deployment-row:last-child {
+  border-bottom: 0;
+}
+
+.deployment-row strong,
+.deployment-row small {
+  display: block;
+}
+
+.deployment-row small {
+  margin-top: 4px;
+  color: #7a8791;
+  line-height: 1.35;
+}
+
+.deployment-header {
+  background: #f7f9fa;
+  color: #6f7c86;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.setup-copy {
+  padding: 18px 22px;
+  color: #60707b;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.setup-copy p {
+  margin-top: 0;
+}
+
+@media (max-width: 1100px) {
+  .metric-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .deployment-row {
+    grid-template-columns:
+      minmax(180px, 1.2fr)
+      minmax(220px, 1.6fr)
+      repeat(2, minmax(80px, 0.7fr));
+  }
+
+  .deployment-row > :nth-child(5),
+  .deployment-row > :nth-child(6) {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .dashboard-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .metric-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .deployment-row {
+    grid-template-columns: 1fr;
+  }
+
+  .deployment-header {
+    display: none;
+  }
+
+  .deployment-row > :nth-child(3),
+  .deployment-row > :nth-child(4),
+  .deployment-row > :nth-child(5),
+  .deployment-row > :nth-child(6) {
+    display: none;
+  }
+}
+
