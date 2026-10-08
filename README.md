@@ -36,17 +36,18 @@ inventory
 
 ## Current milestone
 
-**PR 3 — Impact assessment and risk classification**
+**PR 4 — Authorization before deployment**
 
-PR 3 adds deployment-context impact assessment and risk classification:
+PR 4 adds enforceable authorization-before-deployment:
 
-- complete review across twelve accountability dimensions;
-- intended-benefit and foreseeable-harm analysis;
-- deterministic gross and residual risk scoring;
-- explicit assessment completeness checks;
-- provenance and source links;
-- CAIAE evidence persistence through the SDK; and
-- supersession support for reassessments without rewriting prior evidence.
+- active impact assessment as a hard prerequisite;
+- risk-sensitive approval quorum;
+- deployment-specific scope and operating conditions;
+- explicit validity windows and expiration;
+- approve/deny decisions with rationale;
+- authorization-effectiveness checks;
+- revocation; and
+- emergency authorization with justification and mandatory review.
 
 No enacted statute or legal mandate is assumed by PR 1. The initial policy
 source status is explicitly `policy-framework`.
@@ -95,4 +96,5 @@ See:
 - [Architecture](docs/ARCHITECTURE.md)
 - [Inventory and lineage](docs/INVENTORY.md)
 - [Impact assessment](docs/IMPACT-ASSESSMENT.md)
+- [Authorization before deployment](docs/AUTHORIZATION.md)
 - [Development plan](docs/DEVELOPMENT-PLAN.md)
