@@ -36,16 +36,17 @@ inventory
 
 ## Current milestone
 
-**PR 5 — Material change and reassessment**
+**PR 6 — Continuous monitoring**
 
-PR 5 adds material-change and reassessment controls:
+PR 6 adds continuous operational monitoring:
 
-- model-version, data, purpose, population, and decision-process change detection;
-- incident, harm, monitoring-threshold, and scheduled-review triggers;
-- explicit authorization-continuity outcomes;
-- reauthorization requirements for material deployment changes;
-- auditable reassessment-trigger evidence; and
-- preservation of historical authorization scope without allowing stale approvals to drift onto changed deployments.
+- typed monitoring plans and metric categories;
+- performance, reliability, fairness, drift, data-quality, human-override, and contestability metrics;
+- minimum, maximum, and range thresholds;
+- complete observation validation;
+- CAIAE monitoring-plan and observation evidence;
+- deterministic threshold-breach evaluation; and
+- automatic reassessment-trigger evidence when a monitored boundary is crossed.
 
 No enacted statute or legal mandate is assumed by PR 1. The initial policy
 source status is explicitly `policy-framework`.
@@ -96,4 +97,5 @@ See:
 - [Impact assessment](docs/IMPACT-ASSESSMENT.md)
 - [Authorization before deployment](docs/AUTHORIZATION.md)
 - [Material change and reassessment](docs/REASSESSMENT.md)
+- [Continuous monitoring](docs/MONITORING.md)
 - [Development plan](docs/DEVELOPMENT-PLAN.md)
