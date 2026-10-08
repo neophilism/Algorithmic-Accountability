@@ -4,6 +4,7 @@ import type {
   Evidence,
   EvidenceView,
   Finding,
+  FindingStatus,
   FindingView,
   JsonObject,
   Resource,
@@ -323,11 +324,7 @@ export async function reviewAccountabilityCase(
 export async function listAccountabilityFindings(
   client: CaseClient,
   deploymentContextResourceId: string,
-  status?: Parameters<
-    CaseClient[
-      "listFindingsForResource"
-    ]
-  >[1]["status"],
+  status?: FindingStatus,
 ): Promise<Finding[]> {
   return client.listFindingsForResource(
     deploymentContextResourceId,
