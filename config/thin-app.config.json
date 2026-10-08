@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1",
+  "appId": "algorithmic-accountability",
+  "displayName": "Algorithmic Accountability",
+  "description": "Governance application for accountable deployment, monitoring, reassessment, and remediation of algorithmic and automated decision systems.",
+  "engine": {
+    "apiBaseUrl": "http://localhost:4000",
+    "requestTimeoutMs": 30000
+  },
+  "features": {
+    "rulesets": true,
+    "resources": true,
+    "checks": true,
+    "authorizations": true,
+    "exceptions": true,
+    "evidence": true,
+    "deadlines": true,
+    "findings": true,
+    "remediations": true,
+    "certifications": true,
+    "reporting": true,
+    "publication": true,
+    "integrations": true,
+    "security": true
+  },
+  "resourceTypes": {
+    "algorithmic-system": {
+      "label": "Algorithmic system",
+      "description": "A model, rules engine, scoring system, ranking system, or other automated decision capability subject to accountability controls."
+    },
+    "deployment-context": {
+      "label": "Deployment context",
+      "description": "A specific use of an algorithmic system for a defined purpose, population, organization, and decision process."
+    },
+    "model-version": {
+      "label": "Model version",
+      "description": "A materially identifiable version or release whose changes may trigger review, reassessment, or renewed authorization."
+    }
+  },
+  "metadata": {
+    "sourceStatus": "policy-framework",
+    "legalAuthorityAssumed": false,
+    "primaryLifecycle": "assess-authorize-deploy-monitor-reassess-remediate",
+    "designGoal": "authorization-before-deployment with continuous accountability"
+  }
+}
