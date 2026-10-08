@@ -4,6 +4,7 @@ import {
 import type {
   ComplianceEngineClient,
   EvidenceView,
+  JsonObject,
   Resource,
 } from "@caiae/sdk";
 
@@ -197,7 +198,7 @@ export async function createImpactAssessmentEvidence(
             input.supersedesEvidenceId,
         }
       : {}),
-    provenance: {
+    provenance: jsonObject({
       assessmentId:
         input.assessmentId,
       assessor:
@@ -208,8 +209,8 @@ export async function createImpactAssessmentEvidence(
         input.sourceUris ?? [],
       methodology:
         "algorithmic-accountability-impact-assessment-v1",
-    },
-    attributes: {
+    }),
+    attributes: jsonObject({
       intendedBenefits:
         input.intendedBenefits,
       foreseeableHarms:
@@ -219,7 +220,7 @@ export async function createImpactAssessmentEvidence(
       overallRationale:
         input.overallRationale,
       risk,
-    },
+    }),
     metadata: {
       accountabilityDomain:
         "algorithmic-accountability",
@@ -261,4 +262,13 @@ function isHttpUrl(
   } catch {
     return false;
   }
+}
+
+
+function jsonObject(
+  value: unknown,
+): JsonObject {
+  return JSON.parse(
+    JSON.stringify(value),
+  ) as JsonObject;
 }
