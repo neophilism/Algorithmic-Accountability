@@ -2,8 +2,12 @@ export {
   buildPublicAccountabilitySummary,
   getRenderedDeploymentReport,
   issueAccountabilityCertification,
+  previewDeploymentCompliancePublication,
+  publishDeploymentCompliancePublication,
+  listDeploymentCompliancePublications,
   loadAccountabilityPortfolio,
   loadDeploymentAccountabilityReport,
+  unpublishDeploymentCompliancePublication,
 } from "./reporting.js";
 
 export type {
