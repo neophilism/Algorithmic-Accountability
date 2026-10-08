@@ -23,6 +23,7 @@ export type ReportingClient =
     | "listDeadlinesBySubject"
     | "getDeadlineStatus"
     | "issueCertification"
+    | "listResources"
   >;
 
 const defaultPublicFields:
@@ -33,6 +34,28 @@ const defaultPublicFields:
     "decisionEffect",
     "appealOrReviewAvailable",
   ];
+
+export async function loadAccountabilityPortfolio(
+  client: ReportingClient,
+  asOf = new Date().toISOString(),
+): Promise<DeploymentAccountabilityReport[]> {
+  const deployments =
+    await client.listResources({
+      resourceType:
+        "deployment-context",
+    });
+
+  return Promise.all(
+    deployments.map(
+      (deployment) =>
+        loadDeploymentAccountabilityReport(
+          client,
+          deployment.id,
+          asOf,
+        ),
+    ),
+  );
+}
 
 export async function loadDeploymentAccountabilityReport(
   client: ReportingClient,
