@@ -36,18 +36,17 @@ inventory
 
 ## Current milestone
 
-**PR 1 — Foundation and thin-app boundary**
+**PR 2 — System, deployment, and model-version inventory**
 
-PR 1 establishes:
+PR 2 adds the canonical accountability inventory and lineage model:
 
-- the pinned CAIAE dependency and SDK boundary;
-- Node 24 / TypeScript / GitHub Actions validation;
-- the thin-app feature and resource configuration;
-- the initial accountability lifecycle;
-- reassessment triggers and review dimensions;
-- a Next.js application shell;
-- public-safe configuration and engine-health endpoints; and
-- the full development roadmap.
+- algorithmic-system records for the underlying capability;
+- model-version records with parent-system and prior-version lineage;
+- deployment-context records for concrete uses of a specific version;
+- purpose, operator, affected-population, human-role, decision-effect, data-input, and operating-window fields;
+- CAIAE SDK-backed create/list helpers;
+- lineage validation before linked resources are created; and
+- a hard boundary that keeps authorization state off the model itself.
 
 No enacted statute or legal mandate is assumed by PR 1. The initial policy
 source status is explicitly `policy-framework`.
@@ -94,4 +93,5 @@ The default engine endpoint is `http://localhost:4000`. Override it with
 See:
 
 - [Architecture](docs/ARCHITECTURE.md)
+- [Inventory and lineage](docs/INVENTORY.md)
 - [Development plan](docs/DEVELOPMENT-PLAN.md)
