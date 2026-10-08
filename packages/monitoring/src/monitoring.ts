@@ -228,8 +228,12 @@ export async function recordMonitoringObservation(
             evaluation.breaches,
           ),
         decision,
-        sourceUris:
-          input.sourceUris,
+        ...(input.sourceUris
+          ? {
+              sourceUris:
+                input.sourceUris,
+            }
+          : {}),
       },
     );
 
@@ -527,7 +531,7 @@ function validatePlanEvidence(
 }
 
 function parseMetrics(
-  value: JsonObject[string],
+  value: JsonObject[string] | undefined,
 ): MonitoringMetricDefinition[] {
   if (
     !Array.isArray(value)
