@@ -269,6 +269,17 @@ export async function reviewAccountabilityCase(
           caseEvidence.title,
       });
 
+    const priorAssessmentEvidenceId =
+      stringOrUndefined(
+        caseEvidence.provenance
+          .assessmentEvidenceId,
+      );
+    const relatedAuthorizationId =
+      stringOrUndefined(
+        caseEvidence.attributes
+          .relatedAuthorizationId,
+      );
+
     await recordReassessmentTrigger(
       client,
       {
@@ -280,16 +291,16 @@ export async function reviewAccountabilityCase(
           "Substantiated accountability case: " +
           caseEvidence.title,
         decision,
-        priorAssessmentEvidenceId:
-          stringOrUndefined(
-            caseEvidence.provenance
-              .assessmentEvidenceId,
-          ),
-        relatedAuthorizationId:
-          stringOrUndefined(
-            caseEvidence.attributes
-              .relatedAuthorizationId,
-          ),
+        ...(priorAssessmentEvidenceId
+          ? {
+              priorAssessmentEvidenceId,
+            }
+          : {}),
+        ...(relatedAuthorizationId
+          ? {
+              relatedAuthorizationId,
+            }
+          : {}),
       },
     );
 
@@ -551,7 +562,7 @@ function requireDeploymentContext(
 }
 
 function parseSeverity(
-  value: JsonObject[string],
+  value: JsonObject[string] | undefined,
 ): AccountabilityCaseSeverity {
   if (
     value === "low" ||
@@ -568,7 +579,7 @@ function parseSeverity(
 }
 
 function stringOrUndefined(
-  value: JsonObject[string],
+  value: JsonObject[string] | undefined,
 ): string | undefined {
   return typeof value ===
     "string"
