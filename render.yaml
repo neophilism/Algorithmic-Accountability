@@ -1,0 +1,19 @@
+previews:
+  generation: automatic
+
+services:
+  - type: web
+    name: algorithmic-accountability-preview
+    runtime: node
+    repo: https://github.com/neophilism/Algorithmic-Accountability
+    region: virginia
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start -w @algorithmic-accountability/web -- --hostname 0.0.0.0 --port $PORT
+    autoDeployTrigger: checksPass
+    healthCheckPath: /api/engine-health
+    envVars:
+      - key: NODE_VERSION
+        value: "24"
+      - key: AA_DEMO_MODE
+        value: "true"
