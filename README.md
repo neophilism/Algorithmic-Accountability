@@ -36,18 +36,16 @@ inventory
 
 ## Current milestone
 
-**PR 7 — Complaints, incidents, and findings**
+**PR 8 — Remediation, suspension, and corrective action**
 
-PR 7 adds the accountability-case workflow:
+PR 8 adds corrective action after formal findings:
 
-- complaint and incident evidence;
-- separate substantiation review evidence;
-- no automatic finding for a mere allegation;
-- failed accountability checks for substantiated cases;
-- CAIAE finding synchronization;
-- reassessment triggers for substantiated harms;
-- finding ownership and acknowledgment; and
-- finding dispute and dispute-resolution flows.
+- CAIAE-native remediation planning, execution, verification, rejection, and cancellation;
+- finding closure only after all active remediation is verified;
+- temporary operational suspension without inventing a nonexistent authorization state;
+- safe resumption only after blocking findings clear and authorization remains effective;
+- permanent deployment retirement; and
+- replacement linkage that preserves the old deployment's immutable history.
 
 No enacted statute or legal mandate is assumed by PR 1. The initial policy
 source status is explicitly `policy-framework`.
@@ -100,4 +98,5 @@ See:
 - [Material change and reassessment](docs/REASSESSMENT.md)
 - [Continuous monitoring](docs/MONITORING.md)
 - [Complaints, incidents, and findings](docs/CASES-FINDINGS.md)
+- [Corrective action](docs/CORRECTIVE-ACTION.md)
 - [Development plan](docs/DEVELOPMENT-PLAN.md)
