@@ -36,18 +36,16 @@ inventory
 
 ## Current milestone
 
-**PR 4 — Authorization before deployment**
+**PR 5 — Material change and reassessment**
 
-PR 4 adds enforceable authorization-before-deployment:
+PR 5 adds material-change and reassessment controls:
 
-- active impact assessment as a hard prerequisite;
-- risk-sensitive approval quorum;
-- deployment-specific scope and operating conditions;
-- explicit validity windows and expiration;
-- approve/deny decisions with rationale;
-- authorization-effectiveness checks;
-- revocation; and
-- emergency authorization with justification and mandatory review.
+- model-version, data, purpose, population, and decision-process change detection;
+- incident, harm, monitoring-threshold, and scheduled-review triggers;
+- explicit authorization-continuity outcomes;
+- reauthorization requirements for material deployment changes;
+- auditable reassessment-trigger evidence; and
+- preservation of historical authorization scope without allowing stale approvals to drift onto changed deployments.
 
 No enacted statute or legal mandate is assumed by PR 1. The initial policy
 source status is explicitly `policy-framework`.
@@ -97,4 +95,5 @@ See:
 - [Inventory and lineage](docs/INVENTORY.md)
 - [Impact assessment](docs/IMPACT-ASSESSMENT.md)
 - [Authorization before deployment](docs/AUTHORIZATION.md)
+- [Material change and reassessment](docs/REASSESSMENT.md)
 - [Development plan](docs/DEVELOPMENT-PLAN.md)
