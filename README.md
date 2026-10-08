@@ -36,18 +36,20 @@ inventory
 
 ## Current milestone
 
-**PR 10 — Reporting, transparency, and certification**
+**PR 11 — Full fictional demonstration**
 
-PR 10 adds operator and public-safe reporting:
+PR 11 adds the complete self-contained demonstration:
 
-- a server-side operator portfolio across deployment contexts;
-- per-deployment accountability reports covering assessments, monitoring, incidents, findings, deadlines, and certifications;
-- aggregate dashboard metrics;
-- text/CSV engine report export;
-- whitelist-based public accountability summaries that never dump arbitrary engine attributes; and
-- optional certification issuance only when an explicit policy authority and supporting CAIAE check are supplied.
+- five fictional deployment contexts spanning approved, conditional, blocked, reassessment, and suspended states;
+- a low-risk authorized use;
+- a high-impact conditional authorization;
+- a proposed system blocked before launch;
+- a material model change requiring reassessment and reauthorization;
+- a monitoring-threshold breach that becomes an incident, finding, suspension, and corrective action;
+- clickable deployment drill-downs with authorization conditions, assessments, monitoring, findings, remediation, deadlines, and immutable timeline; and
+- a reproducible Render preview plus smoke test.
 
-Certification remains policy-driven and is not treated as a universal "AI approved" state.
+The public demo requires no database or operator credentials and is visibly labeled fictional.
 
 No enacted statute or legal mandate is assumed by PR 1. The initial policy
 source status is explicitly `policy-framework`.
@@ -103,4 +105,5 @@ See:
 - [Corrective action](docs/CORRECTIVE-ACTION.md)
 - [Deadlines and renewal](docs/DEADLINES-RENEWAL.md)
 - [Reporting and transparency](docs/REPORTING-TRANSPARENCY.md)
+- [Full fictional demonstration](docs/FULL-DEMO.md)
 - [Development plan](docs/DEVELOPMENT-PLAN.md)
