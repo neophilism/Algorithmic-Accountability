@@ -2,6 +2,7 @@ export {
   buildPublicAccountabilitySummary,
   getRenderedDeploymentReport,
   issueAccountabilityCertification,
+  loadAccountabilityPortfolio,
   loadDeploymentAccountabilityReport,
 } from "./reporting.js";
 
