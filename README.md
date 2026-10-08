@@ -36,19 +36,18 @@ inventory
 
 ## Current milestone
 
-**PR 9 — Deadlines, periodic review, and renewal**
+**PR 10 — Reporting, transparency, and certification**
 
-PR 9 adds the accountability calendar and renewal-readiness layer:
+PR 10 adds operator and public-safe reporting:
 
-- assessment and reassessment deadlines;
-- recurring monitoring-review deadlines;
-- remediation clocks linked to findings;
-- authorization-renewal deadlines linked to the active authorization;
-- retirement/closeout deadlines;
-- CAIAE-native warning, grace, recurrence, and escalation mechanics; and
-- a fail-closed renewal readiness check that requires current assessment evidence, required monitoring evidence, an effective existing authorization, and no unresolved high/critical findings.
+- a server-side operator portfolio across deployment contexts;
+- per-deployment accountability reports covering assessments, monitoring, incidents, findings, deadlines, and certifications;
+- aggregate dashboard metrics;
+- text/CSV engine report export;
+- whitelist-based public accountability summaries that never dump arbitrary engine attributes; and
+- optional certification issuance only when an explicit policy authority and supporting CAIAE check are supplied.
 
-Renewal readiness never extends an authorization automatically; it only determines whether the deployment is ready to re-enter the PR 4 authorization workflow.
+Certification remains policy-driven and is not treated as a universal "AI approved" state.
 
 No enacted statute or legal mandate is assumed by PR 1. The initial policy
 source status is explicitly `policy-framework`.
@@ -103,4 +102,5 @@ See:
 - [Complaints, incidents, and findings](docs/CASES-FINDINGS.md)
 - [Corrective action](docs/CORRECTIVE-ACTION.md)
 - [Deadlines and renewal](docs/DEADLINES-RENEWAL.md)
+- [Reporting and transparency](docs/REPORTING-TRANSPARENCY.md)
 - [Development plan](docs/DEVELOPMENT-PLAN.md)
