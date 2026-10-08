@@ -36,17 +36,18 @@ inventory
 
 ## Current milestone
 
-**PR 6 — Continuous monitoring**
+**PR 7 — Complaints, incidents, and findings**
 
-PR 6 adds continuous operational monitoring:
+PR 7 adds the accountability-case workflow:
 
-- typed monitoring plans and metric categories;
-- performance, reliability, fairness, drift, data-quality, human-override, and contestability metrics;
-- minimum, maximum, and range thresholds;
-- complete observation validation;
-- CAIAE monitoring-plan and observation evidence;
-- deterministic threshold-breach evaluation; and
-- automatic reassessment-trigger evidence when a monitored boundary is crossed.
+- complaint and incident evidence;
+- separate substantiation review evidence;
+- no automatic finding for a mere allegation;
+- failed accountability checks for substantiated cases;
+- CAIAE finding synchronization;
+- reassessment triggers for substantiated harms;
+- finding ownership and acknowledgment; and
+- finding dispute and dispute-resolution flows.
 
 No enacted statute or legal mandate is assumed by PR 1. The initial policy
 source status is explicitly `policy-framework`.
@@ -98,4 +99,5 @@ See:
 - [Authorization before deployment](docs/AUTHORIZATION.md)
 - [Material change and reassessment](docs/REASSESSMENT.md)
 - [Continuous monitoring](docs/MONITORING.md)
+- [Complaints, incidents, and findings](docs/CASES-FINDINGS.md)
 - [Development plan](docs/DEVELOPMENT-PLAN.md)
