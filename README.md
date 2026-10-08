@@ -36,17 +36,17 @@ inventory
 
 ## Current milestone
 
-**PR 2 — System, deployment, and model-version inventory**
+**PR 3 — Impact assessment and risk classification**
 
-PR 2 adds the canonical accountability inventory and lineage model:
+PR 3 adds deployment-context impact assessment and risk classification:
 
-- algorithmic-system records for the underlying capability;
-- model-version records with parent-system and prior-version lineage;
-- deployment-context records for concrete uses of a specific version;
-- purpose, operator, affected-population, human-role, decision-effect, data-input, and operating-window fields;
-- CAIAE SDK-backed create/list helpers;
-- lineage validation before linked resources are created; and
-- a hard boundary that keeps authorization state off the model itself.
+- complete review across twelve accountability dimensions;
+- intended-benefit and foreseeable-harm analysis;
+- deterministic gross and residual risk scoring;
+- explicit assessment completeness checks;
+- provenance and source links;
+- CAIAE evidence persistence through the SDK; and
+- supersession support for reassessments without rewriting prior evidence.
 
 No enacted statute or legal mandate is assumed by PR 1. The initial policy
 source status is explicitly `policy-framework`.
@@ -94,4 +94,5 @@ See:
 
 - [Architecture](docs/ARCHITECTURE.md)
 - [Inventory and lineage](docs/INVENTORY.md)
+- [Impact assessment](docs/IMPACT-ASSESSMENT.md)
 - [Development plan](docs/DEVELOPMENT-PLAN.md)
