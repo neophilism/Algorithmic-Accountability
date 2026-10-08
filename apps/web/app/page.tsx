@@ -13,11 +13,17 @@ import {
   AccountabilityDashboard,
 } from "../components/accountability-dashboard";
 import {
+  DemoBanner,
+} from "../components/demo-banner";
+import {
   buildThinAppConfig,
 } from "../lib/config";
 import {
   loadAccountabilityDashboard,
 } from "../lib/dashboard";
+import {
+  isAlgorithmicAccountabilityDemoMode,
+} from "../lib/demo-mode";
 
 export const dynamic =
   "force-dynamic";
@@ -40,6 +46,9 @@ export default async function HomePage() {
       loadAccountabilityDashboard(),
     ]);
 
+  const demoMode =
+    isAlgorithmicAccountabilityDemoMode();
+
   return (
     <main className="shell">
       <header className="masthead">
@@ -58,6 +67,8 @@ export default async function HomePage() {
         </div>
         <EngineStatus />
       </header>
+
+      {demoMode && <DemoBanner />}
 
       <section className="hero">
         <p className="eyebrow">
