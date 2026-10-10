@@ -1,5 +1,7 @@
 # Algorithmic Accountability
 
+**Full development plan and cross-account handoff:** [docs/DEVELOPMENT_PLAN.md](docs/DEVELOPMENT_PLAN.md).
+
 Algorithmic Accountability is a thin application of the
 [Compliance, Authorization & Immutable Audit Engine](https://github.com/neophilism/Compliance-Authorization-Immutable-Audit-Engine)
 for governing algorithmic systems and automated decision deployments.
