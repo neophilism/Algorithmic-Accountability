@@ -1,0 +1,22 @@
+project:
+  name: Algorithmic-Accountability
+  display_name: Algorithmic Accountability
+  repository: neophilism/Algorithmic-Accountability
+  status: active-development
+
+roadmap:
+  version: 1
+  planned_prs: 12
+  approved: true
+
+milestones:
+  - name: Foundation and inventory
+    prs: 2
+  - name: Assessment authorization reassessment
+    prs: 3
+  - name: Monitoring cases and remediation
+    prs: 3
+  - name: Renewal reporting and demonstration
+    prs: 3
+  - name: Abstraction review
+    prs: 1
