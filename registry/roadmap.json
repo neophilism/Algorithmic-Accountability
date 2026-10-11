@@ -1,0 +1,73 @@
+{
+  "repository": "neophilism/Algorithmic-Accountability",
+  "title": "Algorithmic-Accountability",
+  "version": 1,
+  "planVerified": true,
+  "plannedPrCount": 12,
+  "sourceFiles": [
+    ".exechub/project.yml",
+    "docs/DEVELOPMENT_PLAN.md"
+  ],
+  "milestones": [
+    {
+      "id": "AA-001",
+      "title": "Foundation and thin-app boundary",
+      "origin": "original"
+    },
+    {
+      "id": "AA-002",
+      "title": "System, deployment, and version inventory",
+      "origin": "original"
+    },
+    {
+      "id": "AA-003",
+      "title": "Impact assessment and risk classification",
+      "origin": "original"
+    },
+    {
+      "id": "AA-004",
+      "title": "Authorization before deployment",
+      "origin": "original"
+    },
+    {
+      "id": "AA-005",
+      "title": "Material change and reassessment",
+      "origin": "original"
+    },
+    {
+      "id": "AA-006",
+      "title": "Continuous monitoring",
+      "origin": "original"
+    },
+    {
+      "id": "AA-007",
+      "title": "Complaints, incidents, and findings",
+      "origin": "original"
+    },
+    {
+      "id": "AA-008",
+      "title": "Remediation, suspension, and corrective action",
+      "origin": "original"
+    },
+    {
+      "id": "AA-009",
+      "title": "Deadlines, periodic review, and renewal",
+      "origin": "original"
+    },
+    {
+      "id": "AA-010",
+      "title": "Reporting, transparency, and certification",
+      "origin": "original"
+    },
+    {
+      "id": "AA-011",
+      "title": "Full demonstration",
+      "origin": "original"
+    },
+    {
+      "id": "AA-012",
+      "title": "Abstraction review and upstream hardening",
+      "origin": "original"
+    }
+  ]
+}
