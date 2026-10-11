@@ -1,3 +1,5 @@
+> **Canonical PR tracking:** [`registry/roadmap.json`](../registry/roadmap.json). Historical detailed plan continues below; add/change PRs only in the canonical file.
+
 # Algorithmic-Accountability: complete development plan and handoff
 
 **Source:** [docs/DEVELOPMENT-PLAN.md](../docs/DEVELOPMENT-PLAN.md) (existing approved project plan, preserved below without omissions).
