@@ -1,0 +1,54 @@
+version: 2.1
+
+# Main application verification, plus independent E2EESA record and preview health.
+jobs:
+  full-source-verification:
+    docker:
+      - image: cimg/node:24.21.0
+    resource_class: large
+    environment:
+      CI: "true"
+    steps:
+      - checkout
+      - run:
+          name: Restore pinned engine submodules recursively
+          command: git submodule update --init --recursive
+      - run:
+          name: Install complete workspace dependencies
+          command: npm install
+      - run:
+          name: Strict TypeScript across engine and application
+          command: npm run typecheck
+      - run:
+          name: All application and engine tests
+          command: npm test
+      - run:
+          name: Build every package and deployable app
+          command: npm run build
+  live-preview-smoke:
+    docker:
+      - image: cimg/node:24.21.0
+    resource_class: small
+    environment:
+      PREVIEW_BASE_URL: https://algorithmic-accountability-preview.onrender.com
+      SMOKE_ATTEMPTS: "4"
+    steps:
+      - checkout
+      - run:
+          name: Verify actual preview pages and fictional data markers
+          command: node scripts/preview-smoke.mjs
+  security-status-record:
+    docker:
+      - image: cimg/python:3.12
+    resource_class: small
+    steps:
+      - checkout
+      - run:
+          name: E2EESA integrity only; not security certification
+          command: python3 scripts/validate_e2eesa_status.py
+workflows:
+  all-required-checks:
+    jobs:
+      - full-source-verification
+      - live-preview-smoke
+      - security-status-record
