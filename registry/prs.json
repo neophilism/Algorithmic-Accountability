@@ -1,9 +1,14 @@
 {
-  "schemaVersion": 1,
   "repository": "neophilism/Algorithmic-Accountability",
-  "roadmapVersion": 1,
+  "title": "Algorithmic-Accountability",
   "planVerified": true,
   "plannedPrCount": 12,
+  "sourceFiles": [
+    ".exechub/project.yml",
+    "docs/DEVELOPMENT_PLAN.md"
+  ],
+  "schemaVersion": 1,
+  "roadmapVersion": 1,
   "observedAt": "2026-10-11T17:40:38.129Z",
   "units": [
     {
@@ -13,7 +18,10 @@
       "prs": [
         1
       ],
-      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit"
+      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit",
+      "dependsOn": [],
+      "externalDependencies": [],
+      "externalPrerequisites": []
     },
     {
       "id": "AA-002",
@@ -22,7 +30,10 @@
       "prs": [
         2
       ],
-      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit"
+      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit",
+      "dependsOn": [],
+      "externalDependencies": [],
+      "externalPrerequisites": []
     },
     {
       "id": "AA-003",
@@ -31,7 +42,10 @@
       "prs": [
         3
       ],
-      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit"
+      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit",
+      "dependsOn": [],
+      "externalDependencies": [],
+      "externalPrerequisites": []
     },
     {
       "id": "AA-004",
@@ -40,7 +54,10 @@
       "prs": [
         4
       ],
-      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit"
+      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit",
+      "dependsOn": [],
+      "externalDependencies": [],
+      "externalPrerequisites": []
     },
     {
       "id": "AA-005",
@@ -49,7 +66,10 @@
       "prs": [
         5
       ],
-      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit"
+      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit",
+      "dependsOn": [],
+      "externalDependencies": [],
+      "externalPrerequisites": []
     },
     {
       "id": "AA-006",
@@ -58,7 +78,10 @@
       "prs": [
         6
       ],
-      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit"
+      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit",
+      "dependsOn": [],
+      "externalDependencies": [],
+      "externalPrerequisites": []
     },
     {
       "id": "AA-007",
@@ -67,7 +90,10 @@
       "prs": [
         7
       ],
-      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit"
+      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit",
+      "dependsOn": [],
+      "externalDependencies": [],
+      "externalPrerequisites": []
     },
     {
       "id": "AA-008",
@@ -76,7 +102,10 @@
       "prs": [
         8
       ],
-      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit"
+      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit",
+      "dependsOn": [],
+      "externalDependencies": [],
+      "externalPrerequisites": []
     },
     {
       "id": "AA-009",
@@ -85,7 +114,10 @@
       "prs": [
         9
       ],
-      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit"
+      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit",
+      "dependsOn": [],
+      "externalDependencies": [],
+      "externalPrerequisites": []
     },
     {
       "id": "AA-010",
@@ -94,7 +126,10 @@
       "prs": [
         10
       ],
-      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit"
+      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit",
+      "dependsOn": [],
+      "externalDependencies": [],
+      "externalPrerequisites": []
     },
     {
       "id": "AA-011",
@@ -103,7 +138,10 @@
       "prs": [
         11
       ],
-      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit"
+      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit",
+      "dependsOn": [],
+      "externalDependencies": [],
+      "externalPrerequisites": []
     },
     {
       "id": "AA-012",
@@ -112,7 +150,10 @@
       "prs": [
         12
       ],
-      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit"
+      "mappingEvidence": "GitHub merged PR title explicitly labels approved numbered work unit",
+      "dependsOn": [],
+      "externalDependencies": [],
+      "externalPrerequisites": []
     }
   ],
   "pullRequests": [
